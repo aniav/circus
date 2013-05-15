@@ -666,7 +666,7 @@ actions taken by both of them on the same items.</aside>
 </section>
 <section>
     <h2>
-<img src="img/__EUCLIDEAN_DISTANCE_SCORE__1_.png" style="height: 599.3195085525513px;">
+<img src="img/EUCLIDEAN_DISTANCE_SCORE__1_.png" style="height: 599.3195085525513px;">
     <br>
 </h2>
 </section>
@@ -697,7 +697,7 @@ actions taken by both of them on the same items.</aside>
 </section>
 <section>
     <h2>
-<img src="img/__PEARSON_CORRELATION_SCORE1.png" style="font-size: 75.96px; height: 587.3195085525513px;">
+<img src="img/PEARSON_CORRELATION_SCORE1.png" style="font-size: 75.96px; height: 587.3195085525513px;">
     <br>
 </h2>
 </section>
@@ -708,7 +708,8 @@ actions taken by both of them on the same items.</aside>
 <div>
     <pre><code>def get_top_matches(user, ratings, max_items):
     """Get the most similar matches for specified user."""
-    scores = [(sim(ratings, user, x), x) for x in ratings if user != x]
+    scores = [(sim(ratings, user, x), x)
+              for x in ratings if user != x]
     scores = sorted(scores, reverse=True)
     return scores[:max_items]<br></code></pre>
 </div>
